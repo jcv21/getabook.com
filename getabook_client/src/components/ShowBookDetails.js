@@ -14,7 +14,7 @@ class showBookDetails extends Component {
 
     componentDidMount() {
         axios
-            .get('http://localhost:3000/api/books/' + this.props.match.params.id)
+            .get('http://localhost:8082/api/books/' + this.props.match.params.id)
             .then(res => {
                 this.setState({
                     book: res.data
@@ -27,7 +27,7 @@ class showBookDetails extends Component {
 
     onDeleteClick (id) {
         axios
-            .delete('http://localhost:3000/api/books/' + id)
+            .delete('http://localhost:8082/api/books/' + id)
             .then(res => {
                 this.props.history.push('/');
             })

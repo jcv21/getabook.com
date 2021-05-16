@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 //Load Book Model
-const Book = require('../../models/Book');
+const Book = require('../../models/book');
 
 /**
  * @route GET api/books/test
@@ -49,11 +49,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     Book.create(req.body)
         .then(book => res.json({    msg: 'Book added successfully'  }))
-        .catch(err => res.status(400).json(
-            {
-                error: "Unable to add this book"
-            })
-        );
+        .catch(err => res.status(400).json({ error: "Unable to add this book", error_code: err }));
 });
 
 /**

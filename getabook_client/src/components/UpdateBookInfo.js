@@ -21,7 +21,7 @@ class UpdateBookInfo extends Component {
 
     componentDidMount() {
         axios
-            .get('http://localhost:3000/api/books/'+ this.props.match.params.id)
+            .get('http://localhost:8082/api/books/'+ this.props.match.params.id)
             .then(res => {
                 this.setState({
                     title: res.data.title,
@@ -56,7 +56,7 @@ class UpdateBookInfo extends Component {
         };
 
         axios
-            .put('http://localhost:3000/api/books/'+this.props.match.params.id, data)
+            .put('http://localhost:8082/api/books/'+this.props.match.params.id, data)
             .then(res => {
                 this.props.history.push('/show-book/'+this.props.match.params.id);
             })
