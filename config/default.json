@@ -1,4 +1,4 @@
 {
     "mongoURI":
-        "mongodb+srv://justin21:python01@database.piorv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+        "mongodb+srv://<username>:<password>@database.piorv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 }
