@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
  * @access Public
  */
 router.get('/:id', (req, res) => {
-    Book.findbyId(req.params.id)
+    Book.findById(req.params.id)
         .then(book => res.json(book))
         .catch(err => res.status(404).json(
             {
